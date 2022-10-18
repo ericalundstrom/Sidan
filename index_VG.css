@@ -236,3 +236,59 @@ nav>div:nth-child(4):hover {
     grid-row: 1;
     border-radius: 20px 20px 0px 20px;
 }
+
+#axis_bold_as_love>div>div:nth-child(1) {
+    padding-bottom: 20px;
+}
+
+#axis_bold_as_love>div>div:nth-child(3) {
+    padding-top: 20px;
+}
+
+#axis_bold_as_love>.song_list {
+    color: white;
+}
+
+#axis_bold_as_love>.song_list>div:nth-child(1) {
+    background-color: #94765a;
+    margin-left: 10px;
+    border-radius: 0px 0px 0px 20px;
+}
+
+#axis_bold_as_love>.song_list>div:nth-child(2) {
+    background-color: #94765a;
+    color: white;
+    margin-right: 10px;
+    border-radius: 0px 0px 20px 0px;
+}
+
+#axis_bold_as_love>.song_list>div>h2 {
+    padding: 0 20px;
+}
+
+#axis_bold_as_love>.anecdotes>.bottom_left_90 {
+    border-radius: 20px 20px 20px 0;
+    background-color: #94765a;
+    grid-column: 1/span 2;
+}
+
+#axis_bold_as_love>.anecdotes>Li:nth-child(2) {
+    background-color: #94765a;
+    border-radius: 0px 20px 20px 20px;
+}
+
+#axis_bold_as_love>.anecdotes>Li:nth-child(5) {
+    background-image: url("images/Billie_and_Finneas.webp");
+    grid-column: 4/ span 2;
+    width: 90%;
+    /*Fråga Sebbe imorgon om detta*/
+}
+
+#axis_bold_as_love>.anecdotes>Li:nth-child(6) {
+    background-color: #94765a;
+}
+
+
+footer {
+    padding: 10vh 0 2vh 2vh;
+}
