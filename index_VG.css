@@ -1,0 +1,238 @@
+@font-face {
+    font-family: "Bungee_Shade";
+    src: url("Bungee_Shade/BungeeShade-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Bungee_Outline";
+    src: url("Bungee_Outline/BungeeOutline-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Barlow_Condensed";
+    src: url("Barlow_Condensed/BarlowCondensed-Medium.ttf");
+}
+
+
+body {
+    margin: 0;
+    background-image: url("images/konsert4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    height: 100vh;
+    color: rgba(255, 255, 255, 0.695);
+    font-family: "Barlow_Condensed";
+}
+
+body>div>div {
+    background-color: rgba(28, 27, 27, 0.581);
+    margin: 5vw;
+    border-radius: 20px;
+
+}
+
+article {
+    background-color: rgba(76, 73, 73, 0.445);
+    margin: 2vw;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+header {
+    font-family: "Bungee_Shade";
+    font-size: 4vw;
+    color: rgba(255, 255, 255, 0.809);
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 7px;
+    height: 90px;
+    margin: 2vw;
+}
+
+nav>div {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.644);
+    color: black;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 35px;
+}
+
+nav>div:nth-child(1):hover {
+    background-color: rgba(0, 0, 0, 0.655);
+    color: white;
+}
+
+nav>div:nth-child(3):hover {
+    background-color: rgba(0, 0, 0, 0.655);
+    color: white;
+}
+
+nav>div:nth-child(4):hover {
+    background-color: rgba(0, 0, 0, 0.655);
+    color: white;
+}
+
+.marked {
+    font-weight: bolder;
+    box-shadow: 1px 1px 5px 5px white;
+}
+
+.album_data {
+    padding-left: 20px;
+}
+
+.album_data>div>h1 {
+    font-family: "Bungee_Outline";
+    font-size: 6vh;
+    margin-bottom: 0;
+}
+
+.album_data>div>h2 {
+    font-size: 4vh;
+    margin-top: 0;
+    color: white;
+}
+
+.album_data>div:nth-child(2) ul {
+    /*Kommer ej åt listan!*/
+    list-style: none;
+}
+
+.album_description {
+    font-size: 2vh;
+    padding-top: 10px;
+    max-width: 90%;
+}
+
+.cover {
+    position: relative;
+    margin: 10px;
+    grid-column: 2;
+}
+
+.show_hover {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 20px 20px 0 0;
+}
+
+.show_not_hover {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.show_hover:hover {
+    opacity: 0;
+}
+
+.song_list ul {
+    list-style: decimal;
+}
+
+.song_list {
+    gap: 5px;
+    grid-column: 2/span 3;
+    height: 100%;
+    font-size: 2vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+
+}
+
+.song_list>div {
+    background-color: black;
+    border-radius: 0 0 0 20px;
+    padding-bottom: 40px;
+}
+
+.song_list>div:nth-child(1) {
+    margin-left: 10px;
+}
+
+.song_list>div:nth-child(2) {
+    background-color: black;
+    margin-right: 10px;
+    border-radius: 0 0 20px 0;
+    padding-left: 0px;
+}
+
+.song_list>div>h2 {
+    padding-left: 20px;
+}
+
+
+.anecdotes {
+    grid-column: 1/span 3;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    height: 300px;
+    gap: 10px;
+    padding: 20px;
+    color: white;
+}
+
+.top_right_90,
+.two_wide,
+.image_1,
+.bottom_right_90,
+.top_left_90 {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top_right_90 {
+    background-color: black;
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 20px 0 20px 20px;
+
+}
+
+.two_wide {
+    background-color: black;
+    grid-column: 3/span 2;
+    grid-row: 1;
+    border-radius: 20px 20px 20px 0;
+}
+
+.empty {
+    display: none;
+}
+
+.image_1 {
+    background-image: url("images/Finneas.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 150px;
+    grid-column: 5;
+    grid-row: 1;
+    align-items: flex-end;
+    border-radius: 0 20px 20px 20px;
+    padding-bottom: 10px;
+}
+
+.bottom_right_90 {
+    grid-column: 6;
+    grid-row: 1;
+    border-radius: 20px 20px 0px 20px;
+}
