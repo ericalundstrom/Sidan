@@ -43,7 +43,6 @@ article {
     grid-template-columns: 3fr 2fr;
     grid-template-rows: repeat(3, auto);
     padding: 1vw;
-
 }
 
 header {
@@ -325,6 +324,7 @@ footer {
         grid-column: 1;
         grid-row: 1;
         margin-bottom: 0;
+        margin: 5px;
     }
 
     .show_hover {
@@ -342,21 +342,25 @@ footer {
         gap: 10;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        display: inline-grid;
-        margin-left: 10px;
         margin-top: 0;
-
+        margin: 5px;
     }
 
     .song_list>div:nth-child(1) {
-
         width: 100%;
         border-radius: 0 20px 0 0;
-
     }
 
     .song_list>div:nth-child(2) {
         width: 100%;
+    }
+
+    .song_list ul {
+        padding-left: 4vw;
+    }
+
+    .song_list h2 {
+        padding-left: 4vw;
     }
 
     .album_data {
@@ -365,8 +369,13 @@ footer {
     }
 
     .album_data>div>h1 {
-        font-size: 5vw;
+        font-size: 4vw;
     }
+
+    #are_you_experienced>.song_list>div>h2 {
+        padding-left: 3vw;
+    }
+
 
     .album_data>div:nth-child(2) {
         font-size: 2vw;
@@ -383,7 +392,7 @@ footer {
         height: 50vw;
         font-size: 2vw;
         gap: 1vw;
-        padding: 0 20px;
+        padding: 1vw;
         margin-top: 0;
     }
 
@@ -397,6 +406,7 @@ footer {
         grid-column: 3;
         grid-row: 2;
     }
+
 
     #axis_bold_as_love>.song_list>div:nth-child(1) {
         width: 100%;
@@ -425,8 +435,14 @@ footer {
 }
 
 @media (max-width:500px) {
-    article {
 
+    body>div>div {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    article {
+        margin: 10px;
         grid-template-rows: 1fr auto auto;
     }
 
@@ -437,6 +453,10 @@ footer {
 
     .album_data>div:nth-child(2) {
         font-size: 3vw;
+    }
+
+    .album_data>div>h1 {
+        font-size: 6vw;
     }
 
     header>h1 {
@@ -453,6 +473,7 @@ footer {
 
     .cover {
         grid-column: 1/span 4;
+        margin: 1vw;
     }
 
     .show_hover {
@@ -468,6 +489,7 @@ footer {
         grid-template-rows: auto;
         font-size: 2vw;
         margin-left: 0;
+        margin: 1vw;
     }
 
     .song_list {
@@ -479,6 +501,10 @@ footer {
         padding-left: 4vw;
     }
 
+    #are_you_experienced>.song_list>div>h2 {
+        padding-left: 4vw;
+    }
+
     .song_list ul {
         padding-left: 7vw;
     }
@@ -486,15 +512,13 @@ footer {
     #are_you_experienced>.song_list>div:nth-child(1) {
         border-radius: 0 0 0px 20px;
         margin-top: 5px;
+        font-weight: 100;
     }
 
     #are_you_experienced>.song_list>div:nth-child(2) {
         margin-top: 5px;
     }
 
-    #are_you_experienced .song_list h2 {
-        font-size: 4vw;
-    }
 
     #axis_bold_as_love>.song_list>div:nth-child(1) {
         border-radius: 0 0 0px 20px;
@@ -506,4 +530,36 @@ footer {
         margin-top: 10px;
     }
 
+    .anecdotes {
+        font-size: 3vw;
+        height: 80vw;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        padding: 1vw;
+    }
+
+    #are_you_experienced .two_wide {
+        grid-column: 2/span 2;
+    }
+
+    #are_you_experienced .bottom_right_90 {
+        grid-column: 3;
+    }
+
+    #are_you_experienced .image_1 {
+        grid-column: 2;
+    }
+
+    #axis_bold_as_love>.anecdotes>li:nth-child(5) {
+        grid-column: 1/span 2;
+        width: 94%;
+    }
+
+    #axis_bold_as_love>.anecdotes>li:nth-child(2) {
+        grid-column: 3;
+    }
+
+    #axis_bold_as_love>.anecdotes>li:nth-child(6) {
+        grid-column: 3;
+    }
 }
