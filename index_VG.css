@@ -32,7 +32,6 @@ body>div>div {
     background-color: rgba(28, 27, 27, 0.581);
     margin: 5vw;
     border-radius: 20px;
-
 }
 
 article {
@@ -43,6 +42,8 @@ article {
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: repeat(3, auto);
+    padding: 1vw;
+
 }
 
 header {
@@ -115,14 +116,13 @@ nav>div:nth-child(4):hover {
 }
 
 .album_description {
-    font-size: 1vw;
-    padding-top: 10px;
+    font-size: 1.2vw;
+    padding-top: 1vw;
     max-width: 90%;
 }
 
 .cover {
     position: relative;
-    margin: 10px;
     grid-column: 2;
 }
 
@@ -131,6 +131,8 @@ nav>div:nth-child(4):hover {
     width: 100%;
     position: absolute;
     border-radius: 20px 20px 0 0;
+    transition-property: opacity;
+    transition-duration: 1s;
 }
 
 .show_not_hover {
@@ -149,14 +151,13 @@ nav>div:nth-child(4):hover {
 }
 
 .song_list {
-    gap: 5px;
+    gap: 10px;
     grid-column: 2/span 3;
-    height: 100%;
-    font-size: 1vw;
+    font-size: 1.2vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: white;
-    display: inline-grid;
+    margin-top: 10px;
 }
 
 .song_list>div {
@@ -165,13 +166,11 @@ nav>div:nth-child(4):hover {
     padding-bottom: 20px;
 }
 
-.song_list>div:nth-child(1) {
-    margin-left: 1vw;
-}
+.song_list>div:nth-child(1) {}
 
 .song_list>div:nth-child(2) {
     background-color: black;
-    margin-right: 10px;
+
     border-radius: 0 0 20px 0;
 }
 
@@ -189,7 +188,7 @@ nav>div:nth-child(4):hover {
     gap: 20px;
     padding: 20px;
     color: white;
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
 
 .top_right_90,
@@ -244,7 +243,7 @@ nav>div:nth-child(4):hover {
 
 
 #axis_bold_as_love>div>div:nth-child(1) {
-    padding-bottom: 3vw;
+    padding-bottom: 2vw;
 }
 
 #axis_bold_as_love>div>div:nth-child(3) {
@@ -257,7 +256,7 @@ nav>div:nth-child(4):hover {
 
 #axis_bold_as_love>.song_list>div:nth-child(1) {
     background-color: #94765a;
-    margin-left: 10px;
+
     border-radius: 0px 0px 0px 20px;
 
 }
@@ -265,7 +264,7 @@ nav>div:nth-child(4):hover {
 #axis_bold_as_love>.song_list>div:nth-child(2) {
     background-color: #94765a;
     color: white;
-    margin-right: 10px;
+
     border-radius: 0px 0px 20px 0px;
 }
 
@@ -286,7 +285,7 @@ nav>div:nth-child(4):hover {
 }
 
 #axis_bold_as_love>.anecdotes>Li:nth-child(5) {
-    background-image: url("images/Billie_and_Finneas1.jpg");
+    background-image: url("images/Billie_and_Finneas.jpg");
     grid-column: 4/ span 2;
     width: 23vw;
     margin-right: 20px;
@@ -299,7 +298,7 @@ nav>div:nth-child(4):hover {
 
 
 footer {
-    padding: 10vh 0 2vh 2vh;
+    padding: 8vh 0 2vh 2vh;
     font-size: 3vw;
 }
 
@@ -328,6 +327,10 @@ footer {
         margin-bottom: 0;
     }
 
+    .show_hover {
+        border-radius: 20px 0 0 20px;
+    }
+
     .cover :nth-last-of-type(1) {
         opacity: 0;
     }
@@ -335,19 +338,21 @@ footer {
     .song_list {
         grid-row: 1;
         display: grid;
-        font-size: 1.4vw;
+        font-size: 2vw;
         gap: 10;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         display: inline-grid;
-        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 0;
+
     }
 
     .song_list>div:nth-child(1) {
-        margin-left: 0;
+
         width: 100%;
         border-radius: 0 20px 0 0;
-        margin-top: 10px;
+
     }
 
     .song_list>div:nth-child(2) {
@@ -365,11 +370,10 @@ footer {
 
     .album_data>div:nth-child(2) {
         font-size: 2vw;
-
     }
 
     .album_description>p {
-        font-size: 2vw;
+        font-size: 3vw;
         line-height: 1.4;
     }
 
@@ -422,21 +426,17 @@ footer {
 
 @media (max-width:500px) {
     article {
-        grid-template-columns: 1fr;
+
         grid-template-rows: 1fr auto auto;
     }
 
     .album_data {
-        grid-column: 1;
+        grid-column: 1/span 4;
         grid-row: 3;
     }
 
-    #axis_bold_as_love:nth-child(2) {
-        gap: 10px;
-    }
-
-    #axis_bold_as_love>.song_list>div:nth-child(1) {
-        width: 90%;
+    .album_data>div:nth-child(2) {
+        font-size: 3vw;
     }
 
     header>h1 {
@@ -451,49 +451,58 @@ footer {
         height: 10vw;
     }
 
-    #axis_bold_as_love>.cover {
-        height: 100%;
-        width: 100%;
+    .cover {
+        grid-column: 1/span 4;
+    }
+
+    .show_hover {
+        border-radius: 20px 20px 0 0;
     }
 
     .song_list {
         display: grid;
         grid-column: 1;
         grid-row: 2;
-        gap: 20px;
+        gap: 10px;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: auto;
         font-size: 2vw;
+        margin-left: 0;
+    }
+
+    .song_list {
+        font-size: 3vw;
+        grid-column: 1/span 4;
+    }
+
+    .song_list h2 {
+        padding-left: 4vw;
     }
 
     .song_list ul {
-        padding-left: 5vw;
+        padding-left: 7vw;
     }
 
     #are_you_experienced>.song_list>div:nth-child(1) {
         border-radius: 0 0 0px 20px;
-        margin-left: 10px;
+        margin-top: 5px;
     }
 
     #are_you_experienced>.song_list>div:nth-child(2) {
-        border-radius: 0 0 20px 0;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
-    #axis_bold_as_love>.song_list {
-        width: 100%;
+    #are_you_experienced .song_list h2 {
+        font-size: 4vw;
     }
 
     #axis_bold_as_love>.song_list>div:nth-child(1) {
         border-radius: 0 0 0px 20px;
         width: 100%;
-        margin-left: 10px;
+        margin-top: 10px;
     }
 
     #axis_bold_as_love>.song_list>div:nth-child(2) {
-        width: 100%;
-        margin-right: 0;
-        padding-right: 10px;
         margin-top: 10px;
     }
 
