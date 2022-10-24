@@ -34,8 +34,6 @@ body {
     font-family: "Barlow_Condensed";
 }
 
-
-
 body>div>div {
     background-color: rgba(28, 27, 27, 0.581);
     margin: 5vw;
@@ -104,7 +102,7 @@ nav>div:nth-child(4):hover {
 }
 
 .album_data {
-    padding-left: 20px;
+    padding-left: 10px;
     position: relative;
 }
 
@@ -132,7 +130,6 @@ nav>div:nth-child(4):hover {
 .album_description {
     font-size: calc(1.5* var(--text-size));
     padding-top: 1vw;
-    max-width: 90%;
 }
 
 .album_description>p {
@@ -493,6 +490,7 @@ footer {
 
     .album_description>p {
         line-height: 1.4;
+        font-size: calc(2.6*var(--text-size));
     }
 
     .anecdotes {
@@ -566,11 +564,11 @@ footer {
     }
 
     .album_description>p {
-        font-size: calc(2.5* var(--text-size));
+        font-size: calc(3* var(--text-size));
     }
 
     .album_data>div:nth-child(2) {
-        font-size: calc(2.5* var(--text-size));
+        font-size: calc(3* var(--text-size));
     }
 
     .album_data>div>h1 {
@@ -652,7 +650,7 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr;
         padding: 1vw;
-        font-size: calc(2.5* var(--text-size));
+        font-size: calc(2.8* var(--text-size));
     }
 
     #are_you_experienced .two_wide {
