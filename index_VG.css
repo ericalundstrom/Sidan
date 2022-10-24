@@ -18,6 +18,9 @@
     src: url("Barlow_Condensed/BarlowCondensed-Medium.ttf");
 }
 
+:root {
+    --text-size: 1.2vw
+}
 
 body {
     margin: 0;
@@ -52,7 +55,7 @@ article {
 
 header {
     font-family: "Bungee_Shade";
-    font-size: 3.7vw;
+    font-size: calc(3* var(--text-size));
     color: rgba(255, 255, 255, 0.809);
     padding: 2vw 2vw 0 2vw;
 }
@@ -64,7 +67,7 @@ header>h1 {
 nav {
     display: flex;
     gap: 7px;
-    height: 6vw;
+    height: 7vw;
     margin: 2vw;
 }
 
@@ -76,7 +79,7 @@ nav>div {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    font-size: 3vw;
+    font-size: calc(3.5* var(--text-size));
 }
 
 nav>div:nth-child(1):hover {
@@ -105,14 +108,18 @@ nav>div:nth-child(4):hover {
     position: relative;
 }
 
+.album_data>div:nth-child(1)>h2 {
+    font-size: calc(1.8* var(--text-size));
+}
+
 .album_data>div>h1 {
     font-family: "Bungee_Outline";
-    font-size: 5.3vh;
+    font-size: calc(2.8* var(--text-size));
     margin-bottom: 0;
 }
 
 .album_data>div>h2 {
-    font-size: 3vh;
+    font-size: calc(3* var(--text-size));
     margin-top: 0;
     color: white;
     font-family: "Barlow_Condensed-Medium";
@@ -123,13 +130,13 @@ nav>div:nth-child(4):hover {
 }
 
 .album_description {
-    font-size: 1.8vw;
+    font-size: calc(1.5* var(--text-size));
     padding-top: 1vw;
     max-width: 90%;
 }
 
 .album_description>p {
-    font-size: 1.4vw;
+    font-size: calc(1.16* var(--text-size));
 }
 
 .cover {
@@ -164,7 +171,7 @@ nav>div:nth-child(4):hover {
 .song_list {
     gap: 10px;
     grid-column: 2/span 3;
-    font-size: 1.2vw;
+    font-size: var(--text-size);
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: white;
@@ -196,7 +203,7 @@ nav>div:nth-child(4):hover {
     gap: 10px;
     padding: 20px;
     color: white;
-    font-size: 1.4vw;
+    font-size: calc(1.16* var(--text-size));
 }
 
 .top_right_90,
@@ -216,7 +223,6 @@ nav>div:nth-child(4):hover {
     grid-column: 1;
     grid-row: 1;
     border-radius: 20px 0 20px 20px;
-
 }
 
 .two_wide {
@@ -231,7 +237,7 @@ nav>div:nth-child(4):hover {
 }
 
 .image_1 {
-    background-image: url("images/Finneas3.jpg");
+    background-image: url("images/Finneas4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -298,7 +304,6 @@ nav>div:nth-child(4):hover {
     grid-column: 4/ span 2;
     width: 22vw;
     margin-right: 20px;
-    /*Fråga Sebbe imorgon om detta*/
 }
 
 #axis_bold_as_love>.anecdotes>Li:nth-child(6) {
@@ -319,21 +324,13 @@ nav>div:nth-child(4):hover {
 
 footer {
     padding: 8vh 0 2vh 2vh;
-    font-size: 3vw;
+    font-size: calc(2.5* var(--text-size));
 }
 
 @media (max-width:900px) {
 
-    header h1 {
-        font-size: 68px;
-    }
-
-    nav>div {
-        font-size: 27px;
-    }
-
     .album_data>div:nth-child(1)>h1 {
-        font-size: 38.75px;
+        font-size: 30.75px;
     }
 
     .album_data>div:nth-child(1)>h2 {
@@ -349,7 +346,7 @@ footer {
     }
 
     .album_description p {
-        font-size: 10.8px;
+        font-size: 12.55px;
     }
 
     .song_list {
@@ -357,7 +354,7 @@ footer {
     }
 
     .anecdotes {
-        font-size: 10.8px;
+        font-size: 12.6333px;
     }
 }
 
@@ -367,7 +364,7 @@ footer {
     }
 
     nav>div {
-        font-size: 33.3px;
+        font-size: 46.6167px;
     }
 
     .album_data>div:nth-child(1)>h1 {
@@ -395,10 +392,9 @@ footer {
     }
 
     .anecdotes {
-        font-size: 13.3167px;
+        font-size: 15.45px;
     }
 }
-
 
 
 @media (max-width:800px) {
@@ -415,7 +411,7 @@ footer {
     }
 
     nav>div {
-        font-size: 4vw;
+        font-size: calc(3.4* var(--text-size));
     }
 
     nav {
@@ -445,7 +441,7 @@ footer {
     .song_list {
         grid-row: 1;
         display: grid;
-        font-size: 2vw;
+        font-size: calc(1.6* var(--text-size));
         gap: 10;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -480,7 +476,7 @@ footer {
     }
 
     .album_description>p {
-        font-size: 2vw;
+        font-size: calc(1.6* var(--text-size));
     }
 
     .album_data>div>h1 {
@@ -491,9 +487,8 @@ footer {
         padding-left: 3vw;
     }
 
-
     .album_data>div:nth-child(2) {
-        font-size: 2vw;
+        font-size: calc(1.6* var(--text-size));
     }
 
     .album_description>p {
@@ -504,7 +499,7 @@ footer {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 1fr;
         height: 50vw;
-        font-size: 2vw;
+        font-size: calc(1.6* var(--text-size));
         gap: 1vw;
         padding: 1vw;
         margin-top: 0;
@@ -520,7 +515,6 @@ footer {
         grid-column: 3;
         grid-row: 2;
     }
-
 
     #axis_bold_as_love>.song_list>div:nth-child(1) {
         width: 100%;
@@ -572,27 +566,27 @@ footer {
     }
 
     .album_description>p {
-        font-size: 3vw;
+        font-size: calc(2.5* var(--text-size));
     }
 
     .album_data>div:nth-child(2) {
-        font-size: 3vw;
+        font-size: calc(2.5* var(--text-size));
     }
 
     .album_data>div>h1 {
-        font-size: 6vw;
+        font-size: calc(5* var(--text-size));
     }
 
     header>h1 {
-        font-size: 12vw;
+        font-size: calc(10* var(--text-size));
     }
 
     nav>div {
-        font-size: 4vw;
+        font-size: calc(3.3* var(--text-size));
     }
 
     nav {
-        height: 10vw;
+        height: calc(8.3* var(--text-size));
     }
 
     .cover {
@@ -611,13 +605,13 @@ footer {
         gap: 10px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        font-size: 2vw;
+        font-size: calc(1.6* var(--text-size));
         margin-left: 0;
         margin: 1vw;
     }
 
     .song_list {
-        font-size: 3vw;
+        font-size: calc(2.5* var(--text-size));
         grid-column: 1/span 4;
     }
 
@@ -643,7 +637,6 @@ footer {
         margin-top: 5px;
     }
 
-
     #axis_bold_as_love>.song_list>div:nth-child(1) {
         border-radius: 0 0 0px 20px;
         width: 100%;
@@ -659,7 +652,7 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr;
         padding: 1vw;
-        font-size: 3vw;
+        font-size: calc(2.5* var(--text-size));
     }
 
     #are_you_experienced .two_wide {
