@@ -10,6 +10,11 @@
 
 @font-face {
     font-family: "Barlow_Condensed";
+    src: url("Barlow_Condensed/BarlowCondensed-Light.ttf");
+}
+
+@font-face {
+    font-family: "Barlow_Condensed-Medium";
     src: url("Barlow_Condensed/BarlowCondensed-Medium.ttf");
 }
 
@@ -22,7 +27,7 @@ body {
     background-attachment: fixed;
     display: flex;
     height: 100vh;
-    color: rgba(255, 255, 255, 0.695);
+    color: rgba(255, 255, 255, 0.822);
     font-family: "Barlow_Condensed";
 }
 
@@ -47,7 +52,7 @@ article {
 
 header {
     font-family: "Bungee_Shade";
-    font-size: 4vw;
+    font-size: 3.7vw;
     color: rgba(255, 255, 255, 0.809);
     padding: 2vw 2vw 0 2vw;
 }
@@ -90,17 +95,19 @@ nav>div:nth-child(4):hover {
 }
 
 .marked {
+    font-family: "Barlow_Condensed-Medium";
     font-weight: bolder;
     box-shadow: 1px 1px 5px 5px white;
 }
 
 .album_data {
     padding-left: 20px;
+    position: relative;
 }
 
 .album_data>div>h1 {
     font-family: "Bungee_Outline";
-    font-size: 4vh;
+    font-size: 5.3vh;
     margin-bottom: 0;
 }
 
@@ -108,6 +115,7 @@ nav>div:nth-child(4):hover {
     font-size: 3vh;
     margin-top: 0;
     color: white;
+    font-family: "Barlow_Condensed-Medium";
 }
 
 .album_data>div:nth-child(2) ul {
@@ -115,9 +123,13 @@ nav>div:nth-child(4):hover {
 }
 
 .album_description {
-    font-size: 1.2vw;
+    font-size: 1.8vw;
     padding-top: 1vw;
     max-width: 90%;
+}
+
+.album_description>p {
+    font-size: 1.4vw;
 }
 
 .cover {
@@ -165,11 +177,8 @@ nav>div:nth-child(4):hover {
     padding-bottom: 20px;
 }
 
-.song_list>div:nth-child(1) {}
-
 .song_list>div:nth-child(2) {
     background-color: black;
-
     border-radius: 0 0 20px 0;
 }
 
@@ -184,10 +193,10 @@ nav>div:nth-child(4):hover {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
     height: 30vh;
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
     color: white;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
 }
 
 .top_right_90,
@@ -240,7 +249,6 @@ nav>div:nth-child(4):hover {
     border-radius: 20px 20px 0px 20px;
 }
 
-
 #axis_bold_as_love>div>div:nth-child(1) {
     padding-bottom: 2vw;
 }
@@ -250,25 +258,27 @@ nav>div:nth-child(4):hover {
 }
 
 #axis_bold_as_love>.song_list {
-    color: white;
+    color: #dacec1;
 }
 
 #axis_bold_as_love>.song_list>div:nth-child(1) {
     background-color: #94765a;
-
     border-radius: 0px 0px 0px 20px;
 
 }
 
 #axis_bold_as_love>.song_list>div:nth-child(2) {
     background-color: #94765a;
-    color: white;
-
+    color: #dacec1;
     border-radius: 0px 0px 20px 0px;
 }
 
 #axis_bold_as_love>.song_list>div>h2 {
     padding: 0 20px;
+}
+
+#axis_bold_as_love .anecdotes {
+    color: #dacec1;
 }
 
 #axis_bold_as_love>.anecdotes>.bottom_left_90 {
@@ -286,7 +296,7 @@ nav>div:nth-child(4):hover {
 #axis_bold_as_love>.anecdotes>Li:nth-child(5) {
     background-image: url("images/Billie_and_Finneas.jpg");
     grid-column: 4/ span 2;
-    width: 23vw;
+    width: 22vw;
     margin-right: 20px;
     /*Fråga Sebbe imorgon om detta*/
 }
@@ -295,13 +305,110 @@ nav>div:nth-child(4):hover {
     background-color: #94765a;
 }
 
+#axis_bold_as_love .album_data::before {
+    content: '';
+    background-image: url("media/number-1-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    height: 50px;
+    width: 50px;
+}
 
 footer {
     padding: 8vh 0 2vh 2vh;
     font-size: 3vw;
 }
 
+@media (max-width:900px) {
+
+    header h1 {
+        font-size: 68px;
+    }
+
+    nav>div {
+        font-size: 27px;
+    }
+
+    .album_data>div:nth-child(1)>h1 {
+        font-size: 38.75px;
+    }
+
+    .album_data>div:nth-child(1)>h2 {
+        font-size: 20.5667px;
+    }
+
+    .album_data>div:nth-child(2)>p {
+        font-size: 15.65px;
+    }
+
+    .album_data>div:nth-child(2)>ul {
+        font-size: 15.65px;
+    }
+
+    .album_description p {
+        font-size: 10.8px;
+    }
+
+    .song_list {
+        font-size: 10.8px;
+    }
+
+    .anecdotes {
+        font-size: 10.8px;
+    }
+}
+
+@media(min-width:1111px) {
+    header h1 {
+        font-size: 82.1333px;
+    }
+
+    nav>div {
+        font-size: 33.3px;
+    }
+
+    .album_data>div:nth-child(1)>h1 {
+        font-size: 38.25px;
+    }
+
+    .album_data>div:nth-child(1)>h2 {
+        font-size: 21.65px;
+    }
+
+    .album_data>div:nth-child(2)>p {
+        font-size: 18.65px;
+    }
+
+    .album_data>div:nth-child(2)>ul {
+        font-size: 18.65px;
+    }
+
+    .album_description p {
+        font-size: 15.5333px;
+    }
+
+    .song_list {
+        font-size: 13.3167px;
+    }
+
+    .anecdotes {
+        font-size: 13.3167px;
+    }
+}
+
+
+
 @media (max-width:800px) {
+    body {
+        background-image: url("images/Konsert2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
     header h1 {
         text-align: center;
         padding: 0 6vw;
@@ -368,6 +475,14 @@ footer {
         grid-row: 2;
     }
 
+    #axis_bold_as_love .album_data::before {
+        z-index: 2;
+    }
+
+    .album_description>p {
+        font-size: 2vw;
+    }
+
     .album_data>div>h1 {
         font-size: 4vw;
     }
@@ -382,7 +497,6 @@ footer {
     }
 
     .album_description>p {
-        font-size: 3vw;
         line-height: 1.4;
     }
 
@@ -435,6 +549,12 @@ footer {
 }
 
 @media (max-width:500px) {
+    body {
+        background-image: url("images/konsert3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 
     body>div>div {
         margin: 0;
@@ -442,13 +562,17 @@ footer {
     }
 
     article {
-        margin: 10px;
+        margin: 20px;
         grid-template-rows: 1fr auto auto;
     }
 
     .album_data {
         grid-column: 1/span 4;
         grid-row: 3;
+    }
+
+    .album_description>p {
+        font-size: 3vw;
     }
 
     .album_data>div:nth-child(2) {
@@ -531,11 +655,11 @@ footer {
     }
 
     .anecdotes {
-        font-size: 3vw;
         height: 80vw;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr;
         padding: 1vw;
+        font-size: 3vw;
     }
 
     #are_you_experienced .two_wide {
